@@ -1,0 +1,68 @@
+{
+    "tasks": [
+        {
+            "UUID": 500001, 
+            "name": "Start", 
+            "dependencies": [], 
+            "time": 0, 
+            "dependents": [
+                500002
+            ], 
+            "desc": "Start."
+        }, 
+        {
+            "UUID": 500002, 
+            "name": "Heat beans", 
+            "dependencies": [
+                500001
+            ], 
+            "time": 420, 
+            "dependents": [
+                500004
+            ], 
+            "desc": "Empty tin of beans into a saucepan. Heat on low for 7 minutes."
+        }, 
+        {
+            "UUID": 500003, 
+            "name": "Toast bread", 
+            "dependencies": [
+                500001
+            ], 
+            "time": 300, 
+            "dependents": [
+                500004
+            ], 
+            "desc": "Place two slices of bread in the toaster. Toast on medium for 5 minues."
+        }, 
+        {
+            "UUID": 500004, 
+            "name": "Plate up", 
+            "dependencies": [
+                500002, 
+                500003
+            ], 
+            "time": 60, 
+            "dependents": [
+                500005
+            ], 
+            "desc": "Slice each piece of toast into 2 triangles. Arrange in a square around the edge of the plate. Pour the beans into the middle of the plate."
+        }, 
+        {
+            "UUID": 500005, 
+            "name": "End", 
+            "dependencies": [
+                500004
+            ], 
+            "time": 10, 
+            "dependents": [], 
+            "desc": "Serve."
+        }
+    ], 
+    "ingredients": [
+        "Baked beans, 1 tin", 
+        "White bread, 2 slices"
+    ], 
+    "desc": "Baked beans skillfully arranged over four triangles of toasted bread", 
+    "UUID": 100001, 
+    "name": "Beans on Toast"
+}

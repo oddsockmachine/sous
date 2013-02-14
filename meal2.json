@@ -1,0 +1,36 @@
+
+{
+	"UUID": 		100002,
+	"name": 		"Croque Monsieur",
+	"desc": 		"Basically a grilled cheese sandwich",
+	"ingredients":  [ "Cheese, 30 grams", "White bread, 2 slices" ],
+	"tasks":		[
+					{
+						"UUID": 500006,
+						"name": "Start",
+						"desc": "Start.",
+						"time": 1,
+						"dependencies": [],
+						"dependents": [ 500007 ]
+					},
+					{
+						"UUID": 500007,
+						"name": "Toastify",
+						"desc": "Put it all into the toastie maker.",
+						"time": 360,
+						"dependencies": [ 500006 ],
+						"dependents": [ 500008 ]
+					},
+					{
+						"UUID": 500008,
+						"name": "End",
+						"desc": "Serve.",
+						"time": 1,
+						"dependencies": [ 500007 ],
+						"dependents": []
+					}
+
+	]
+
+
+}

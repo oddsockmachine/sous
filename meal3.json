@@ -1,0 +1,86 @@
+{
+	"UUID": 		100003,
+	"name": 		"Cooked Breakfast",
+	"desc": 		"Sausages, bacon, tattie scones, black pudding and baked beans, fried to perfection in their own juices and piled on a plate",
+	"ingredients":  [ "Baked beans, 1 tin", "Sausages, 2", "Bacon, 2 slices", "Tattie scones, 1", "Black pudding, 1" ],
+	"tasks":		[
+					{
+						"UUID": 500009,
+						"name": "Start",
+						"desc": "Start.",
+						"active_time": 0,
+						"passive_time": 1,
+						"dependencies": [  ],
+						"dependents": [ 500010 ]
+					},
+					{
+						"UUID": 500010,
+						"name": "Fry sausages",
+						"desc": "Put two sausages into a hot pan and fry on medium heat.",
+						"active_time": 30,
+						"passive_time": 210,
+						"dependencies": [ 500009 ],
+						"dependents": [ 500011 ]
+					},
+					{
+						"UUID": 500011,
+						"name": "Add bacon",
+						"desc": "Add bacon to the pan while the sausages are still frying. Rotate the sausages to ensure even cooking.",
+						"active_time": 30,
+						"passive_time": 210,
+						"dependencies": [ 500010 ],
+						"dependents": [ 500012 ]
+					},
+					{
+						"UUID": 500012,
+						"name": "Fry black pudding",
+						"desc": "Remove the sausages and bacon from the pan and keep warm. Put the black pudding in the same pan and fry on medium heat.",
+						"active_time": 60,
+						"passive_time": 180,
+						"dependencies": [ 500011 ],
+						"dependents": [ 500014 ]
+					},
+					{
+						"UUID": 500013,
+						"name": "Cook beans",
+						"desc": "Pour a tin of baked beans into a saucepan and cook on medium heat.",
+						"active_time": 30,
+						"passive_time": 210,
+						"dependencies": [ 500009 ],
+						"dependents": [ 500015 ]
+					},
+					{
+						"UUID": 500014,
+						"name": "Fry scones",
+						"desc": "Remove the black pudding from the pan, and keep warm with the sausages and bacon. Fry the tattie scone in the remaining fat on high heat",
+						"active_time": 60,
+						"passive_time": 210,
+						"dependencies": [ 500012 ],
+						"dependents": [ 500015 ]
+					},					
+					{
+						"UUID": 500015,
+						"name": "Plate up",
+						"desc": "Slice the tattie scone into triangles. Stack in one corner. Place all fried ingredients onto the plate, then pour beans over.",
+						"active_time": 60,
+						"passive_time": 0,
+						"dependencies": [ 500014, 500013 ],
+						"dependents": [ 500016 ]
+					},
+					{
+						"UUID": 500016,
+						"name": "End",
+						"desc": "Serve.",
+						"active_time": 0,
+						"passive_time": 1,
+						"dependencies": [ 500015 ],
+						"dependents": []
+					}
+
+	]
+
+
+}
+
+
+

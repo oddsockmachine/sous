@@ -1,0 +1,79 @@
+{
+	"name": "Meal",
+	"properties": {
+		"UUID": {
+			"type": "number",
+			"description": "Unique Identifier",
+			"required": true
+		},
+		"name": {
+			"type": "string",
+			"description": "The name of the meal",
+			"required": "true"
+		},
+		"desc": {
+			"type": "string",
+			"description": "Overview of the meal",
+			"required": "false"
+		},
+
+
+		"task": {
+			"type": "object",
+			"properties": {
+				"UUID": {
+					"type": "number",
+					"description": "Unique Identifier",
+					"required": true
+				},
+				"name": {
+					"type": "string",
+					"description": "The name of the task",
+					"required": "true"
+				},
+				"desc": {
+					"type": "string",
+					"description": "Describe this task",
+					"required": "true"
+				},
+				"time": {
+					"type": "number",
+					"description": "How long this task takes, in seconds",
+					"required": "true"
+				},
+				"dependencies": {
+					"type": "array",
+					"description": "This task's dependencies - what tasks must come before it",
+					"items": {
+						"type": "number"
+					},
+					"required": "true"
+				},
+				"dependents": {
+					"type": "array",
+					"description": "This task's dependents - what tasks come after it",
+					"items": {
+						"type": "number"
+					},
+					"required": "false"
+				}
+
+			}
+		},
+
+
+		"tasks": {
+			"type": "array",
+			"items": {
+				"type": "task"
+			}
+		},
+		"ingredients": {
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		} 
+
+	}
+}
